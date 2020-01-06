@@ -40,7 +40,7 @@ public class FileWrite
             outputF.println(line); // modified line outputted into the new file 
         }
 
-        output.close();
+        outputF.close();
         fw.close();
         fr.close();
     }
