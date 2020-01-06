@@ -35,6 +35,7 @@ public class FileWrite
         
         while(fr.hasNext())
         {
+            // check page 17-2 of the BPJ textbook
             String line = fr.nextLine();
             // if 'line' includes the words: fillOval(), addPoint(), fillRect(), setSize()
             outputF.println(line); // modified line outputted into the new file 
