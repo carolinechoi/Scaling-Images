@@ -1,4 +1,3 @@
-// imports
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -13,14 +12,16 @@ public class FileWrite
                                    // such as: java FileWrite SadBear 160
     }
 
-    public static void writeMe(String fileName, double perc) throws IOException
+    public static void writeMe(String fileName, String perc) throws IOException
     {
-        double factor = perc/10;
+        int factor = Integer.parseInt(perc)/10; // need to turn this into a double
+
+        System.out.println(factor);
             
         File myF = new File(fileName);
         Scanner fr = new Scanner(myF);
 
-        String newFile = fileName.substring(0, fileName.length() - 5) + "x2.java";
+        String newFile = fileName.substring(0, fileName.length() - 4) + "x2.txt";
         
         FileWriter fw = new FileWriter(newFile);
         PrintWriter outputF = new PrintWriter(fw);
@@ -37,7 +38,22 @@ public class FileWrite
         {
             // check page 17-2 of the BPJ textbook
             String line = fr.nextLine();
+
             // if 'line' includes the words: fillOval(), addPoint(), fillRect(), setSize()
+            String sally = "lmq" + line + "lmq";
+            String nums[] = sally.split("\\D+");
+            
+            line = line.replaceAll("\\d+", "##_##ddd##_##");
+
+            for(int i = 0; i < nums.length; i++)
+            {
+                if(!nums[i].equals(""))
+                {
+                    int doubled = Integer.parseInt(nums[i]) * factor;
+                    String kingDDD = "" + doubled;
+                    line = line.replaceFirst("##_##ddd##_##", kingDDD);
+                }
+            }
             outputF.println(line); // modified line outputted into the new file 
         }
 

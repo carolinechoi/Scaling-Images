@@ -1,0 +1,14 @@
+something something 25
+{}
+setColor(24, 56, 200);
+kdljflk sleep(20); {}
+dfjjg134 and woe03 run ;
+something.fillOval(23, 5, 10);
+something.addPoint(23, 50);
+something.fillRect(13, 56, 245);
+something.setSize(132, 56);
+ldjflsdkjf
+alg;
+{
+    sldg
+}
